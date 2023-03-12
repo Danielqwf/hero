@@ -19,8 +19,10 @@ class Student(Human):  # дочерний класс
     def age2(self):
         self.age /= 2
         print(self.age)
+
     def h(self):
         super().age1()
+
 
 human = Human('Абил', 14)
 
@@ -40,10 +42,9 @@ human = Human('Абил', 14)
 
 class Tea(Student):
     def __init__(self, name, age, money):
-        super().__init__(name,age)
-        Human.__init__(self,name,age)
+        super().__init__(name, age)
+        Human.__init__(self, name, age)
         self.money = money
-
 
     def age2(self):
         self.age **= 2
@@ -65,7 +66,7 @@ class Tea(Student):
 
 
 student = Student('Жаннат', 19)
-tea = Tea('Даниель', 9,'1сом')
+tea = Tea('Даниель', 9, '1сом')
 # tea.age2()
 # tea.age1()
 tea.supermetod()
@@ -79,6 +80,6 @@ print(tea.age)
 # print(Tea.mro())
 # print(Human.mro())
 
-f=Tea('бека',5,88888)
+f = Tea('бека', 5, 88888)
 f.supermetod()
 print(f.age)
